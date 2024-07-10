@@ -1,0 +1,53 @@
+.logo-image {
+  margin: auto 5% auto 5%;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10%;
+  row-gap: 5%;
+  column-gap: 10px;
+  justify-content: center;
+}
+
+.card {
+  margin: 10px;
+}
+
+.paginator {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+
+#select-limit,
+#select-category {
+  width: 12rem;
+  margin: 20px;
+}
+#cart-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#cart-modal {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    margin: 5%;
+  }
+  #cart-button {
+    position: fixed;
+    z-index: 1000;
+    bottom: 100px;
+  }
+  .page-link {
+    font-size: 0.8rem;
+  }
+}
