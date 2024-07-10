@@ -114,22 +114,10 @@ document.addEventListener("DOMContentLoaded", function () {
       selectCategory.appendChild(categoryItem);
     }
   }
-  function fetchRoot() {
-    fetch("http://localhost:8000/")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }
-
   // Initial fetch to load products
 
   fetchProducts();
   fetchCategory();
-  setInterval(fetchRoot, 180000);
 
   //Event listener for paginator items
   document.getElementById("paginator").addEventListener("click", async (e) => {
@@ -193,6 +181,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 )}</span>
               </li>`;
   });
+  // Event listener for the search button and fetch the products with the new search
+  debugger;
+  document
+    .getElementById("search-button")
+    .addEventListener("click", async () => {
+      const search = document.getElementById("search-input").value;
+      fetchProductByName(search);
+    });
   // Event listeners for the select limit and fetch the products with the new limit
   document
     .getElementById("select-limit")
@@ -236,11 +232,4 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.reload();
     }
   });
-  // Event listener for the search button and fetch the products with the new search
-  document
-    .getElementById("search-button")
-    .addEventListener("click", async () => {
-      const search = document.getElementById("search-input").value;
-      fetchProductByName(search);
-    });
 });
