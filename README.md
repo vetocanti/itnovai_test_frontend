@@ -5,9 +5,10 @@ Ecommerce is conected to an API
 ## Contest
 
 1. Install
-2. Project Structure
-3. Stack
-4. License
+2. Usage
+3. Project Structure
+4. Stack
+5. License
 
 ## Install
 
@@ -23,6 +24,10 @@ Ecommerce is conected to an API
     ```
 
 3. Open `index.html` in your favorite browser
+
+## Usage
+
+Check this URL: https://itnovai-test-frontend.vercel.app/ and compare with your repo
 
 
 ## Estructura del Proyecto
