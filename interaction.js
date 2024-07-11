@@ -50,7 +50,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   // Function to fetch the products from the API
   function fetchProducts(page = 0, limit = 10) {
-    fetch(`http://localhost:8000/products/?page=${page}&limit=${limit}`)
+    fetch(
+      `https://itnovai-test-backend.onrender.com/products/?page=${page}&limit=${limit}`
+    )
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -68,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
     fetch(
-      `http://localhost:8000/products_category/${categoryId}?page=${page}&limit=${limit}`
+      `https://itnovai-test-backend.onrender.com/products_category/${categoryId}?page=${page}&limit=${limit}`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -82,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   // Function to fetch the categories from the API
   function fetchCategory() {
-    fetch("http://localhost:8000/categories/")
+    fetch("https://itnovai-test-backend.onrender.com/categories/")
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -91,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   // Function to fetch the products by name
   function fetchProductByName(name) {
-    fetch(`http://localhost:8000/products_name/${name}`)
+    fetch(`https://itnovai-test-backend.onrender.com/products_name/${name}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -132,7 +134,9 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("products").addEventListener("click", async (e) => {
     if (e.target.tagName === "BUTTON") {
       const productId = e.target.getAttribute("data-id");
-      await fetch(`http://localhost:8000/products_id/${productId}`)
+      await fetch(
+        `https://itnovai-test-backend.onrender.com/products_id/${productId}`
+      )
         .then((response) => response.json())
         .then((product) => {
           let quantity = 1;
