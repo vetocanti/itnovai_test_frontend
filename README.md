@@ -30,9 +30,8 @@ Ecommerce is conected to an API
 Check this URL: https://itnovai-test-frontend.vercel.app/ and compare with your repo
 
 
-## Estructura del Proyecto
+##  Project Structure
 
-Descripción de la estructura de carpetas y archivos en tu proyecto.
 
 ```plaintext
 itnovAI-test-frontend/
@@ -42,3 +41,12 @@ itnovAI-test-frontend/
 ├── interaction.js
 ├── index.html
 ├── README.md
+````
+##  Stack
+1. Javacript vanilla
+2. HTML
+3. CSS
+4. Bootstrap
+
+##License 
+[MIT] (https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
