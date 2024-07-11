@@ -48,5 +48,5 @@ itnovAI-test-frontend/
 3. CSS
 4. Bootstrap
 
-##License 
-[MIT] (https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
+## License 
+[MIT](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
