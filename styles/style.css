@@ -1,5 +1,5 @@
 .diagonal-gradient {
-  background: linear-gradient(to bottom right, #d3d3d3, #a9a9a9); /* Degradado de gris claro a gris oscuro */
+  background: linear-gradient(to bottom right, rgba(240, 240, 240, 0.9), rgba(220, 220, 220, 0.9)); /* Degradado gris claro con opacidad */
 }
 
 .text-title {
