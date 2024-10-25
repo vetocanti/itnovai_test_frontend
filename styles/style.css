@@ -1,11 +1,11 @@
 .diagonal-gradient {
-  background: linear-gradient(to bottom right, blue, pink);
+  background: linear-gradient(to bottom right, #d3d3d3, #a9a9a9); /* Degradado de gris claro a gris oscuro */
 }
 
 .text-title {
-  color: #ff69b4; /* Un rosa vibrante que combina bien con el degradado */
+  color: #333; /* Un gris oscuro que combina bien con el degradado */
   font-family: 'Roboto', sans-serif; /* Cambia el estilo de la letra */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Añade sombra para mejorar la legibilidad */
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5); /* Sombra blanca para mejorar la legibilidad */
 }
 
 .logo-image {
@@ -37,6 +37,7 @@
   width: 12rem;
   margin: 20px;
 }
+
 #cart-button {
   position: fixed;
   bottom: 20px;
