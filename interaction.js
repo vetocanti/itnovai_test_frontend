@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to fetch the products from the API
   function fetchProducts(page = 0, limit = 10) {
     fetch(
-      `https://itnovai-test-backend.onrender.com/products/?page=${page}&limit=${limit}`
+      `http://127.0.0.1:8000/products/?page=${page}&limit=${limit}`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
     fetch(
-      `https://itnovai-test-backend.onrender.com/products_category/${categoryId}?page=${page}&limit=${limit}`
+      `http://127.0.0.1:8000/products_category/${categoryId}?page=${page}&limit=${limit}`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   // Function to fetch the categories from the API
   function fetchCategory() {
-    fetch("https://itnovai-test-backend.onrender.com/categories/")
+    fetch("http://127.0.0.1:8000/categories/")
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   // Function to fetch the products by name
   function fetchProductByName(name) {
-    fetch(`https://itnovai-test-backend.onrender.com/products_name/${name}`)
+    fetch(`http://127.0.0.1:8000/products_name/${name}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (e.target.tagName === "BUTTON") {
       const productId = e.target.getAttribute("data-id");
       await fetch(
-        `https://itnovai-test-backend.onrender.com/products_id/${productId}`
+        `http://127.0.0.1:8000/products_id/${productId}`
       )
         .then((response) => response.json())
         .then((product) => {
