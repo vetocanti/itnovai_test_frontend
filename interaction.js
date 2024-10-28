@@ -14,17 +14,27 @@ document.addEventListener("DOMContentLoaded", function () {
         return `
   <div class="card" style="width: 18rem;">
     <div class="card-body">
-        <div class="discount-badge" style="position: absolute; top: 10px; right: 10px; background-color: red; color: white; padding: 5px; border-radius: 5px;">
-        ${product.discount}%
-      </div>
-    <img src="${product.url_image}" class="card-img-top" alt="...">
+            ${
+              product.discount > 0
+                ? `<div class="discount-badge" style="position: absolute; top: 10px; right: 10px; background-color: red; color: white; padding: 5px; border-radius: 5px;">
+                    ${product.discount}%
+                  </div>`
+                : ""
+            }
+    <img height="300px" width="auto" src="${
+      product.url_image
+    }" class="card-img-top" alt="...">
       <h5 class="card-title">${product.name}</h5>
           <p class="card-text">Now: $ ${Number(
             product.price * (1 - product.discount / 100)
           ).toPrecision(4)}</p>
-      <h6 class="card-subtitle mb-2 text-body-secondary"  style="text-decoration: line-through;">Before: $ ${
-        product.price
-      }</h6>
+           <div style="min-height: 20px;">
+              ${
+                product.discount > 0
+                  ? `<h6 class="card-subtitle mb-2 text-body-secondary" style="text-decoration: line-through;">Before: $ ${product.price}</h6>`
+                  : ""
+              }
+            </div>
       <button  type="button" class="btn btn-success" data-id="${
         product.id
       }" style="margin:auto">Add</button>

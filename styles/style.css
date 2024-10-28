@@ -1,10 +1,14 @@
 .diagonal-gradient {
-  background: linear-gradient(to bottom right, rgba(240, 240, 240, 0.9), rgba(220, 220, 220, 0.9)); /* Degradado gris claro con opacidad */
+  background: linear-gradient(
+    to bottom right,
+    rgba(240, 240, 240, 0.9),
+    rgba(220, 220, 220, 0.9)
+  ); /* Degradado gris claro con opacidad */
 }
 
 .text-title {
   color: #333; /* Un gris oscuro que combina bien con el degradado */
-  font-family: 'Roboto', sans-serif; /* Cambia el estilo de la letra */
+  font-family: "Roboto", sans-serif; /* Cambia el estilo de la letra */
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5); /* Sombra blanca para mejorar la legibilidad */
 }
 
