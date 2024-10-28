@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let total = 0;
   let pages = 0;
   let total_amount = 0;
+  let url = "https://itnovai-test-backend.onrender.com";
   //Function to render the products in the page
   function renderProducts(data) {
     total = data["total_amount"];
@@ -50,9 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   // Function to fetch the products from the API
   function fetchProducts(page = 0, limit = 10) {
-    fetch(
-      `http://127.0.0.1:8000/products/?page=${page}&limit=${limit}`
-    )
+    fetch(`${url}/products/?page=${page}&limit=${limit}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -69,9 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
       fetchProducts(page, limit);
       return;
     }
-    fetch(
-      `http://127.0.0.1:8000/products_category/${categoryId}?page=${page}&limit=${limit}`
-    )
+    fetch(`${url}/products_category/${categoryId}?page=${page}&limit=${limit}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -84,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   // Function to fetch the categories from the API
   function fetchCategory() {
-    fetch("http://127.0.0.1:8000/categories/")
+    fetch(`${url}/categories/`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -93,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   // Function to fetch the products by name
   function fetchProductByName(name) {
-    fetch(`http://127.0.0.1:8000/products_name/${name}`)
+    fetch(`${url}/products_name/${name}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -134,9 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("products").addEventListener("click", async (e) => {
     if (e.target.tagName === "BUTTON") {
       const productId = e.target.getAttribute("data-id");
-      await fetch(
-        `http://127.0.0.1:8000/products_id/${productId}`
-      )
+      await fetch(`${url}/products_id/${productId}`)
         .then((response) => response.json())
         .then((product) => {
           let quantity = 1;
